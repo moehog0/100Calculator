@@ -23,22 +23,23 @@ public class RemakeCalculator {
 
 	private void StartCalculator() {
 		Scanner sc = new Scanner(System.in);
-		String message = "";
 
 		while (mode == 0) {
-
-			if (mode > operator) {
-				mode = 0;
-			}
 
 			System.out.println("Please type the first number: ");
 			INPUT_NUMBER_ONE = sc.nextDouble();
 			System.out.println("Please type the second number: ");
 			INPUT_NUMBER_TWO = sc.nextDouble();
-			System.out.println("Choose an operator: 1 = + | 2 = - | 3 = * | 4 = Divide");
+			System.out.println("Choose an operator: 1 = + | 2 = - | 3 = * | 4 = / |");
 			break;
 	}
-			switch (operator = sc.nextInt()) {
+		switch (operator = sc.nextInt()) {
+			case 1 -> Add();
+			case 2 -> Subtract();
+			case 3 -> Multiply();
+			case 4 -> Divide();
+		}
+		/*switch (operator = sc.nextInt()) {
 				case 1:
 					Add();
 					break;
@@ -51,24 +52,20 @@ public class RemakeCalculator {
 				case 4:
 					Divide();
 					break;
-		}
+		}*/
 	}
 
 	private void Add() {
 		System.out.println(INPUT_NUMBER_ONE + INPUT_NUMBER_TWO);
-		return;
 	}
 	private void Subtract() {
 		System.out.println(INPUT_NUMBER_ONE - INPUT_NUMBER_TWO);
-		return;
 	}
 	private void Multiply() {
 		System.out.println(INPUT_NUMBER_ONE * INPUT_NUMBER_TWO);
-		return;
 	}
 	private void Divide() {
 		System.out.println(INPUT_NUMBER_ONE / INPUT_NUMBER_TWO);
-		return;
 	}
 
 

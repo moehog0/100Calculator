@@ -15,17 +15,16 @@ public class RemakeCalculator {
 			t.printStackTrace();
 		}
 	}
-
 	private double INPUT_NUMBER_ONE = 0;
 	private double INPUT_NUMBER_TWO = 0;
 	private int mode;
 	private int operator;
 
 	private void StartCalculator() {
+
 		Scanner sc = new Scanner(System.in);
 
 		while (mode == 0) {
-
 			System.out.println("Please type the first number: ");
 			INPUT_NUMBER_ONE = sc.nextDouble();
 			System.out.println("Please type the second number: ");
@@ -34,10 +33,10 @@ public class RemakeCalculator {
 			break;
 	}
 		switch (operator = sc.nextInt()) {
-			case 1 -> Add();
-			case 2 -> Subtract();
-			case 3 -> Multiply();
-			case 4 -> Divide();
+			case 1 : Add(); break;
+			case 2 : Subtract(); break;
+			case 3 : Multiply(); break;
+			case 4 : Divide(); break;
 		}
 		/*switch (operator = sc.nextInt()) {
 				case 1:
@@ -54,7 +53,6 @@ public class RemakeCalculator {
 					break;
 		}*/
 	}
-
 	private void Add() {
 		System.out.println(INPUT_NUMBER_ONE + INPUT_NUMBER_TWO);
 	}
@@ -67,6 +65,4 @@ public class RemakeCalculator {
 	private void Divide() {
 		System.out.println(INPUT_NUMBER_ONE / INPUT_NUMBER_TWO);
 	}
-
-
 }
